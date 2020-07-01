@@ -1,3 +1,34 @@
+# git
+alias removebranches="git branch | grep -w "master\|develop" | xargs git branch -D"
+alias todev="git checkout develop && git fetch && git pull origin develop"
+
+# servers
+alias peggy="ssh labela@192.168.22.15"
+alias ocean="ssh sandervspl@134.209.85.102"
+alias oceanroot="ssh root@134.209.85.102"
+
+# nodejs
+alias start="npm run start"
+alias build="npm run build"
+alias server="npm run server"
+alias dev="npm run dev"
+
+# npm
+alias ni="npm install"
+alias nu="npm uninstall"
+alias nid="npm install -D"
+
+# label a
+alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
+alias deploy="./deploy.sh"
+
+# misc
+alias p3000="lsof -t -i :3000"
+alias config="code /Users/sandervispoel/Documents/personal/dotfiles/.extra"
+alias hosts="/etc/hosts"
+
+
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias cd..="cd .."
