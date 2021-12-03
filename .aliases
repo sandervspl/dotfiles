@@ -19,6 +19,7 @@ alias dev="npm run dev"
 alias ni="npm install"
 alias nu="npm uninstall"
 alias nid="npm install -D"
+alias nup="npx npm-upgrade"
 
 # label a
 alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
