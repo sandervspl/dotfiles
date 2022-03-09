@@ -149,3 +149,6 @@ BUN_INSTALL="/Users/sandervispoel2/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
+# Mysql fix
+export PATH=${PATH}:/usr/local/mysql/bin/
