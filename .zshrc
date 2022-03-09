@@ -1,3 +1,8 @@
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 # uncomment to profile prompt startup with zprof
 # zmodload zsh/zprof
 
@@ -77,11 +82,11 @@ auto-ls () {
 chpwd_functions=( auto-ls $chpwd_functions )
 
 # Enable autosuggestions automatically
-zle-line-init() {
-    zle autosuggest-start
-}
+# zle-line-init() {
+#     zle autosuggest-start
+# }
 
-zle -N zle-line-init
+# zle -N zle-line-init
 
 
 # history mgmt
@@ -103,3 +108,10 @@ source ~/.bash_profile
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh

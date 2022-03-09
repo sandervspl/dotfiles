@@ -1,4 +1,9 @@
 
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
@@ -38,7 +43,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Enable history expansion with space
 # E.g. typing !!<space> will replace the !! with your last command
-bind Space:magic-space
+# bind Space:magic-space
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
@@ -56,7 +61,7 @@ type shopt &> /dev/null && shopt -s histappend  # append to history, don't overw
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 
 # Save multi-line commands as one command
-shopt -s cmdhist
+# shopt -s cmdhist
 
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -129,3 +134,18 @@ shopt -s dirspell 2> /dev/null
 
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
+
+# Turn off zsh message
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
+BUN_INSTALL="/Users/sandervispoel2/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
