@@ -52,23 +52,35 @@ alias -- -="cd -"
 
 # mv, rm, cp
 alias mv='mv -v'
-alias rm='rm -i -v'
 alias cp='cp -v'
+alias rm='rm -i -v'
+alias rmrf='rm -rf'
 
+# moving around quickly
+alias p='cd ~/Documents/personal'
+alias w='cd ~/Documents/work'
+
+# misc
 alias chmox='chmod -x'
-
 alias where=which # sometimes i forget
 alias brwe=brew  #typos
-
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
-
 alias ag='ag -f --hidden'
 alias sb='source ~/.bash_profile'
 alias ll='ls -1a'
-
 alias c='code .'
-alias p='cd ~/Documents/personal'
-alias w='cd ~/Documents/work'
+alias pg='echo "pinging Google...\n" && ping www.google.com'
+
+# react
+alias crp='npx create-react-prime@latest'
+alias crpb='npx create-react-prime@beta'
+alias crpd='npx create-react-prime@dev'
+
+# functions
+# mkdir and cd into it
+function mcd() {
+    mkdir -p "$@" && cd "$_"; # @copilot
+}
 
 ###
 # time to upgrade `ls`
