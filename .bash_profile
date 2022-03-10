@@ -149,6 +149,14 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Mysql fix
 export PATH=${PATH}:/usr/local/mysql/bin/
 
+# allows me to cd into directories not directly in my current path
+CDPATH=.:$HOME:$HOME/Documents/work:$HOME/Documents/personal
+
+# safely map node_modules directory to machine's bin directory
+# allows you to write "eslint" instead of "node_modules/.bin/eslint"
+export PATH=${PATH}:/usr/local/bin:$PATH:./node_modules/.bin
+
+
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
