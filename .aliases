@@ -63,6 +63,12 @@ alias brwe=brew  #typos
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
 alias ag='ag -f --hidden'
+alias sb='source ~/.bash_profile'
+alias ll='ls -1a'
+
+alias c='code .'
+alias p='cd ~/Documents/personal'
+alias w='cd ~/Documents/work'
 
 ###
 # time to upgrade `ls`
