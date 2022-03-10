@@ -138,10 +138,6 @@ shopt -s globstar 2> /dev/null
 # Turn off zsh message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
 
@@ -152,3 +148,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Mysql fix
 export PATH=${PATH}:/usr/local/mysql/bin/
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####

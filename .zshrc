@@ -109,9 +109,9 @@ source ~/.bash_profile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
-
-[ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
