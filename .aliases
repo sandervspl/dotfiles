@@ -34,6 +34,16 @@ alias pi="pnpm add"
 alias pu="pnpm remove"
 alias pid="pnpm add -D"
 
+# yarn
+alias ystart="yarn run start"
+alias ybuild="yarn run build"
+alias yserver="yarn run server"
+alias ydev="yarn run dev"
+
+alias yi="yarn add"
+alias yu="yarn remove"
+alias yid="yarn add -D"
+
 # label a
 alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
 alias deploy="./deploy.sh"
