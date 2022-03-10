@@ -8,10 +8,13 @@ alias ocean="ssh sandervspl@188.166.20.157"
 alias oceanroot="ssh root@188.166.20.157"
 
 # nodejs
-alias start="bun run start"
-alias build="bun run build"
-alias server="bun run server"
-alias dev="bun run dev"
+alias start="bun run start --"
+alias build="bun run build --"
+alias server="bun run server --"
+alias dev="bun run dev --"
+alias t="bun run test --"
+alias tw="bun run test:watch --"
+alias tc="bun run test:cov --"
 
 # npm
 alias ni="npm install"
