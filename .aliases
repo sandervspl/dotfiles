@@ -95,6 +95,17 @@ function mcd() {
     mkdir -p "$@" && cd "$_"; # @copilot
 }
 
+# kill port
+kp() {
+    # install kill-port globally if not already installed
+    if ! npm list -g | grep -q kill-port; then
+        npm install -g kill-port
+    fi
+
+    # kill given port
+    kill-port "$@"
+}
+
 ###
 # time to upgrade `ls`
 
