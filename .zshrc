@@ -88,24 +88,18 @@ chpwd_functions=( auto-ls $chpwd_functions )
 
 # zle -N zle-line-init
 
-
 # history mgmt
 # http://www.refining-linux.org/archives/49/ZSH-Gem-15-Shared-history/
 setopt inc_append_history
 setopt share_history
 
-
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
 
 # uncomment to finish profiling
 # zprof
 
-
-
 # Load default dotfiles
 source ~/.bash_profile
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
