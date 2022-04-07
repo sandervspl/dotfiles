@@ -1,8 +1,6 @@
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init bash pre)"
 
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
@@ -156,8 +154,6 @@ CDPATH=.:$HOME:$HOME/Documents/work:$HOME/Documents/personal
 # allows you to write "eslint" instead of "node_modules/.bin/eslint"
 export PATH=${PATH}:/usr/local/bin:$PATH:./node_modules/.bin
 
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init bash post)"
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####

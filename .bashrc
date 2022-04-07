@@ -1,7 +1,6 @@
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init bash pre)"
 
 [ -n "$PS1" ] && source ~/.bash_profile
 
@@ -15,7 +14,9 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init bash post)"
+
+
+export PNPM_HOME="/Users/sandervispoel2/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
