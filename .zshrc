@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
-
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # uncomment to profile prompt startup with zprof
 # zmodload zsh/zprof
 
@@ -105,5 +103,4 @@ source ~/.bash_profile
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
-
+. "$HOME/.fig/shell/zshrc.post.zsh"

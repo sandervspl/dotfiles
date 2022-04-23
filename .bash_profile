@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init bash pre)"
-
+. "$HOME/.fig/shell/bash_profile.pre.bash"
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
@@ -155,5 +153,4 @@ CDPATH=.:$HOME:$HOME/Documents/work:$HOME/Documents/personal
 export PATH=${PATH}:/usr/local/bin:$PATH:./node_modules/.bin
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init bash post)"
-
+. "$HOME/.fig/shell/bash_profile.post.bash"
