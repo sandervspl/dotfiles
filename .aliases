@@ -8,13 +8,13 @@ alias ocean="ssh sandervspl@188.166.20.157"
 alias oceanroot="ssh root@188.166.20.157"
 
 # nodejs
-alias start="bun run start --"
-alias build="bun run build --"
-alias server="bun run server --"
-alias dev="bun run dev --"
-alias t="bun run test --"
-alias tw="bun run test:watch --"
-alias tc="bun run test:cov --"
+alias start="bun run start"
+alias build="bun run build"
+alias server="bun run server"
+alias dev="bun run dev"
+alias t="bun run test"
+alias tw="bun run test:watch"
+alias tc="bun run test:cov"
 
 # npm
 alias ni="npm install"
@@ -49,6 +49,7 @@ alias yid="yarn add -D"
 # label a
 alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
 alias deploy="./deploy.sh"
+alias crp="npx create-react-prime@latest"
 
 # misc
 alias p3000="lsof -t -i :3000"
