@@ -8,6 +8,8 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+source ~/.bashrc
+
 # to help sublimelinter etc with finding my PATHS
 case $- in
    *i*) source ~/.extra
@@ -151,6 +153,10 @@ CDPATH=.:$HOME:$HOME/Documents/work:$HOME/Documents/personal
 # safely map node_modules directory to machine's bin directory
 # allows you to write "eslint" instead of "node_modules/.bin/eslint"
 export PATH=${PATH}:/usr/local/bin:$PATH:./node_modules/.bin
+
+# Deno
+export DENO_INSTALL="/Users/sandervispoel2/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/bash_profile.post.bash"
