@@ -3,9 +3,7 @@ alias removebranches="git branch | grep -w "master\|develop" | xargs git branch 
 alias todev="git checkout develop && git fetch && git pull origin develop"
 
 # servers
-alias peggy="ssh labela@192.168.22.15"
-alias ocean="ssh sandervspl@188.166.20.157"
-alias oceanroot="ssh root@188.166.20.157"
+# ...
 
 # npx
 alias nup="npx npm-upgrade"
