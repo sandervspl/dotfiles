@@ -9,6 +9,7 @@ alias todev="git checkout develop && git fetch && git pull origin develop"
 alias dev="nr dev"
 alias start="nr start"
 alias server="nr server"
+alias build="nr build"
 alias nid='ni -D "$1"'
 alias nu='nun "$1"'
 alias ci="nci"
