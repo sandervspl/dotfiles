@@ -38,14 +38,15 @@ alias w='cd ~/Documents/work'
 
 # misc
 alias chmox='chmod -x'
-alias where=which # sometimes i forget
-alias brwe=brew  #typos
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+alias brwe=brew  # typos 🤪
+alias hosts='sudo $EDITOR /etc/hosts'
 alias ag='ag -f --hidden'
 alias sb='source ~/.bash_profile'
 alias ll='ls -1a'
-alias c='code .'
 alias pg='echo "pinging Google...\n" && ping www.google.com'
+
+# VSCode
+alias c='code .'
 
 # react
 alias crp='npx create-react-prime@latest'
