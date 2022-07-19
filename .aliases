@@ -47,6 +47,15 @@ alias pg='echo "pinging Google...\n" && ping www.google.com'
 
 # VSCode
 alias c='code .'
+alias prettierconfig="
+    mkdir -p .vscode;
+    cd .vscode;
+    touch extensions.json settings.json;
+    echo $'{\n  \"recommendations\": [\"esbenp.prettier-vscode\"]\n}' > extensions.json;
+    echo $'{\n  \"editor.formatOnSave\": true,\n  \"editor.defaultFormatter\": \"esbenp.prettier-vscode\"\n}' > settings.json;
+    cd ..;
+"
+alias pc='prettierconfig'
 
 # react
 alias crp='npx create-react-prime@latest'
