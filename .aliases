@@ -7,44 +7,8 @@ alias peggy="ssh labela@192.168.22.15"
 alias ocean="ssh sandervspl@188.166.20.157"
 alias oceanroot="ssh root@188.166.20.157"
 
-# nodejs
-alias start="bun run start"
-alias build="bun run build"
-alias server="bun run server"
-alias dev="bun run dev"
-alias t="bun run test"
-alias tw="bun run test:watch"
-alias tc="bun run test:cov"
-
-# npm
-alias ni="npm install"
-alias nu="npm uninstall"
-alias nid="npm install -D"
-
 # npx
 alias nup="npx npm-upgrade"
-
-# pnpm
-alias pstart="pnpm run start"
-alias pbuild="pnpm run build"
-alias pserver="pnpm run server"
-alias pdev="pnpm run dev"
-
-alias pin="pnpm install"
-alias pi="pnpm add"
-alias pu="pnpm remove"
-alias pid="pnpm add -D"
-
-# yarn
-alias ystart="yarn run start"
-alias ybuild="yarn run build"
-alias yserver="yarn run server"
-alias ydev="yarn run dev"
-
-alias yin="yarn install"
-alias yi="yarn add"
-alias yu="yarn remove"
-alias yid="yarn add -D"
 
 # label a
 alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
