@@ -29,10 +29,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# mv, rm, cp
-alias mv='mv -v'
-alias cp='cp -v'
-alias rm='rm -i -v'
+# rm
 alias rmrf='rm -rf'
 
 # moving around quickly
