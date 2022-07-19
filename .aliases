@@ -5,6 +5,14 @@ alias todev="git checkout develop && git fetch && git pull origin develop"
 # servers
 # ...
 
+# ni
+alias dev="nr dev"
+alias start="nr start"
+alias server="nr server"
+alias nid='ni -D "$1"'
+alias nu='nun "$1"'
+alias ci="nci"
+
 # npx
 alias nup="npx npm-upgrade"
 
