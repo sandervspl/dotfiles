@@ -14,6 +14,8 @@ alias nup="npx npm-upgrade"
 alias growbee="nvm use growbee && export API_URL=https://api.test-grow-bee.com/api/v1 && export ANALYTICS=UA-72368223-1"
 alias deploy="./deploy.sh"
 alias crp="npx create-react-prime@latest"
+alias crpb="npx create-react-prime@beta"
+alias crpd="npx create-react-prime@dev"
 
 # misc
 alias p3000="lsof -t -i :3000"
