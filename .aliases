@@ -17,6 +17,9 @@ alias ci="nci"
 # npx
 alias nup="npx npm-upgrade"
 
+# pnpm
+alias pup="pnpm add -g pnpm" # update pnpm to the latest version
+
 # label a
 alias d="./deploy.sh"
 alias crp="npx create-react-prime@latest"
