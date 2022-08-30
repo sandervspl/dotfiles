@@ -1,6 +1,7 @@
 # git
 alias removebranches="git branch | grep -w "master\|develop" | xargs git branch -D"
 alias todev="git checkout develop && git fetch && git pull origin develop"
+alias stash="git stash --include-untracked"
 
 # servers
 # ...
