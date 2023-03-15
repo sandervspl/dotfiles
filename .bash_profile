@@ -136,8 +136,8 @@ shopt -s globstar 2> /dev/null
 # Turn off zsh message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# . "$HOME/.cargo/env"
 
 BUN_INSTALL="/Users/sandervispoel2/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
