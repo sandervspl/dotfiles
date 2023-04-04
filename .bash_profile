@@ -139,7 +139,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 # . "$HOME/.cargo/env"
 
-BUN_INSTALL="/Users/sandervispoel2/.bun"
+BUN_INSTALL="/Users/sandervispoel/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
@@ -155,8 +155,11 @@ CDPATH=.:$HOME:$HOME/Documents/work:$HOME/Documents/personal
 export PATH=${PATH}:/usr/local/bin:$PATH:./node_modules/.bin
 
 # Deno
-export DENO_INSTALL="/Users/sandervispoel2/.deno"
+export DENO_INSTALL="/Users/sandervispoel/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Brew
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/bash_profile.post.bash"

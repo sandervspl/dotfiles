@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
 
-export PNPM_HOME="/Users/sandervispoel2/Library/pnpm"
+export PNPM_HOME="/Users/sandervispoel/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
