@@ -19,3 +19,5 @@ PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/bashrc.post.bash"
+
+eval "$(github-copilot-cli alias -- "$0")"
