@@ -17,7 +17,8 @@ alias nu='nun "$1"'
 alias ci="nci"
 
 # npx
-alias nup="npx npm-upgrade"
+# alias nup="npx npm-upgrade@latest"
+alias nup="npx taze@latest -I"
 
 # pnpm
 alias pup="pnpm add -g pnpm" # update pnpm to the latest version
