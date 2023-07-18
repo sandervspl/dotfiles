@@ -18,7 +18,8 @@ alias ci="nci"
 
 # npx
 # alias nup="npx npm-upgrade@latest"
-alias nup="npx taze@latest -I"
+alias nup="npx taze@latest -Iwi"
+alias nupg="npx taze@latest -Iwig"
 
 # pnpm
 alias pup="pnpm add -g pnpm" # update pnpm to the latest version
