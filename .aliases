@@ -8,10 +8,14 @@ alias stasha="git stash apply"
 # ...
 
 # ni
-alias dev="nr dev"
-alias start="nr start"
-alias server="nr server"
-alias build="nr build"
+# alias dev="nr dev"
+alias dev="bun dev"
+# alias start="nr start"
+alias start="bun start"
+# alias server="nr server"
+alias server="bun server"
+# alias build="nr build"
+alias build="bun build"
 alias nid='ni -D "$1"'
 alias nu='nun "$1"'
 alias ci="nci"
