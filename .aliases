@@ -9,13 +9,13 @@ alias stasha="git stash apply"
 
 # ni
 # alias dev="nr dev"
-alias dev="bun run --bun dev"
+alias dev="bun run dev"
 # alias start="nr start"
-alias start="bun run --bun start"
+alias start="bun run start"
 # alias server="nr server"
-alias server="bun run --bun server"
+alias server="bun run server"
 # alias build="nr build"
-alias build="bun run --bun build"
+alias build="bun run build"
 alias nid='ni -D "$1"'
 alias nu='nun "$1"'
 alias ci="nci"
