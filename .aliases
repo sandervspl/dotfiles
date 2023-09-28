@@ -9,13 +9,13 @@ alias stasha="git stash apply"
 
 # ni
 # alias dev="nr dev"
-alias dev="bun dev"
+alias dev="bun run --bun dev"
 # alias start="nr start"
-alias start="bun start"
+alias start="bun run --bun start"
 # alias server="nr server"
-alias server="bun server"
+alias server="bun run --bun server"
 # alias build="nr build"
-alias build="bun --bun run build"
+alias build="bun run --bun build"
 alias nid='ni -D "$1"'
 alias nu='nun "$1"'
 alias ci="nci"
@@ -63,10 +63,10 @@ alias hosts='sudo $EDITOR /etc/hosts'
 alias ag='ag -f --hidden'
 alias sb='source ~/.bash_profile'
 alias ll='ls -1a'
-alias pg='echo "pinging Google...\n" && ping www.google.com'
+alias pg='echo "pinging Google...\n" && ping google.com'
 
 # VSCode
-alias c='code .'
+alias c='cursor .'
 alias prettierconfig="
     mkdir -p .vscode;
     cd .vscode;
