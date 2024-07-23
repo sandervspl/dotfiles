@@ -24,9 +24,29 @@ alias ci="nci"
 # alias nup="npx npm-upgrade@latest"
 alias nup="npx taze@latest -Iwi"
 alias nupg="npx taze@latest -Iwig"
+alias nupm="npx taze@latest -Iwir"
 
 # pnpm
 alias pup="pnpm add -g pnpm" # update pnpm to the latest version
+
+# gh cli
+create_labela_repo() {
+    # Check if git is initialized
+    if [ ! -d .git ]; then
+        echo "Initializing git repository..."
+        git init
+    fi
+
+    # Check if there are uncommitted changes
+    if [ -n "$(git status --porcelain)" ]; then
+        echo "Uncommitted changes found. Adding and committing..."
+        git add .
+        git commit -m "Initial commit"
+    fi
+
+    gh repo create "LabelA/$1" --source=. --push --private --team=front-end
+}
+alias r='create_labela_repo'
 
 # label a
 alias d="./deploy.sh"
