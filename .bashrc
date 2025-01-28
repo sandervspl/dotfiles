@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/bashrc.pre.bash"
 # [ -n "$PS1" ] && source ~/.bash_profile
 
 # when things like nvm/yarn/rvm add rando shit into my .bashrc i move them to ~/.extrarc just cuz
@@ -12,12 +10,15 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 
+# Turso
+export PATH="/Users/sandervispoel2/.turso:$PATH"
 
+# pnpm
 export PNPM_HOME="/Users/sandervispoel/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# Yarn
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/bashrc.post.bash"
-
-eval "$(github-copilot-cli alias -- "$0")"
+# Postgres
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
