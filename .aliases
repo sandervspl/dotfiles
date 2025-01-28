@@ -29,34 +29,6 @@ alias nupm="npx taze@latest -Iwir"
 # pnpm
 alias pup="pnpm add -g pnpm" # update pnpm to the latest version
 
-# gh cli
-create_labela_repo() {
-    # Use current directory name as fallback if no argument is passed
-    local repo_name=${1:-$(basename "$PWD")}
-
-    # Check if git is initialized
-    if [ ! -d .git ]; then
-        echo "Initializing git repository..."
-        git init
-    fi
-
-    # Check if there are uncommitted changes
-    if [ -n "$(git status --porcelain)" ]; then
-        echo "Uncommitted changes found. Adding and committing..."
-        git add .
-        git commit -m "Initial commit"
-    fi
-
-    gh repo create "LabelA/repo_name" --source=. --push --private --team=front-end
-}
-alias r='create_labela_repo'
-
-# label a
-alias d="./deploy.sh"
-alias crp="npx create-react-prime@latest"
-alias crpb="npx create-react-prime@beta"
-alias crpd="npx create-react-prime@dev"
-
 # misc
 alias p3000="lsof -t -i :3000"
 # alias config="code /Users/sandervispoel/Documents/personal/dotfiles/.extra"
@@ -99,11 +71,6 @@ alias prettierconfig="
     cd ..;
 "
 alias pc='prettierconfig'
-
-# react
-alias crp='npx create-react-prime@latest'
-alias crpb='npx create-react-prime@beta'
-alias crpd='npx create-react-prime@dev'
 
 # functions
 # mkdir and cd into it
@@ -190,3 +157,59 @@ alias emptytrash=" \
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
 alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document'
+
+# Initialize Prettier configuration and dependencies
+function init-prettier() {
+    echo "🚀 Initializing Prettier configuration..."
+    
+    # Download prettier config
+    curl -L -o prettier.config.js https://gist.github.com/sandervspl/e8bb49a5c738eff6c66f4edc2254d195/raw/77888f3c3586d5a5572a1ef7b41258b91c033eda/prettier.config.js
+    
+    # Fetch dependencies and convert newlines to spaces
+    DEPS=$(curl -L -s https://gist.github.com/sandervspl/e8bb49a5c738eff6c66f4edc2254d195/raw/77888f3c3586d5a5572a1ef7b41258b91c033eda/dependencies | tr '\n' ' ')
+    
+    # Determine package manager
+    if [ -f "bun.lockb" ]; then
+        echo "📦 Using bun as package manager"
+        bun add -d $DEPS
+    elif [ -f "pnpm-lock.yaml" ]; then
+        echo "📦 Using pnpm as package manager"
+        pnpm add -D $DEPS
+    elif [ -f "package-lock.json" ]; then
+        echo "📦 Using npm as package manager"
+        npm install -D $DEPS
+    elif [ -f "yarn.lock" ]; then
+        echo "📦 Using yarn as package manager"
+        yarn add -D $DEPS
+    else
+        echo "⚠️ No lockfile found. Using npm as default package manager"
+        npm install -D $DEPS
+    fi
+    
+    # Check if file has scripts section
+    if grep -q '"scripts"' package.json; then
+        # Use tmp file to handle the edit
+        TMP_FILE=$(mktemp)
+        jq '.scripts += {"prettier": "prettier --config prettier.config.js --write '\''**/*.{json,js,ts,tsx}'\''"}' package.json > "$TMP_FILE"
+        mv "$TMP_FILE" package.json
+    else
+        # Add scripts section if it doesn't exist
+        TMP_FILE=$(mktemp)
+        jq '. += {"scripts": {"prettier": "prettier --config prettier.config.js --write '\''**/*.{json,js,ts,tsx}'\''"}}' package.json > "$TMP_FILE"
+        mv "$TMP_FILE" package.json
+    fi
+
+    # Create VSCode settings
+    mkdir -p .vscode
+    echo '{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}' > .vscode/settings.json
+    
+    echo '{
+  "recommendations": ["esbenp.prettier-vscode"]
+}' > .vscode/extensions.json
+    
+    echo "✅ Prettier configuration complete!"
+}
+
