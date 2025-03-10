@@ -26,8 +26,13 @@ alias nup="npx taze@latest -Iwi"
 alias nupg="npx taze@latest -Iwig"
 alias nupm="npx taze@latest -Iwir"
 
-# pnpm
-alias pup="pnpm add -g pnpm" # update pnpm to the latest version
+# corepack
+alias yarn="corepack yarn"
+alias yarnpkg="corepack yarnpkg"
+alias pnpm="corepack pnpm"
+alias pnpx="corepack pnpx"
+alias npm="corepack npm"
+alias npx="corepack npx"
 
 # misc
 alias p3000="lsof -t -i :3000"
@@ -61,7 +66,7 @@ alias ll='ls -1a'
 alias pg='echo "pinging Google...\n" && ping google.com'
 
 # VSCode
-alias c='code .'
+alias c='open $1 -a "Cursor"'
 alias prettierconfig="
     mkdir -p .vscode;
     cd .vscode;
